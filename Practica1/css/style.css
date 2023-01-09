@@ -1,0 +1,18 @@
+
+#cuadroTexto{
+    width: auto;
+    height: auto;
+    margin-top: 32px;
+    padding: 16px;
+    border: 2px solid grey;
+    border-radius: 1rem;
+}
+#cuadroTexto p{
+    font-size: larger;
+    margin: 16px;
+}
+#cuadroTexto button{
+    font-weight: bold;
+    padding: 8px;
+    margin-bottom: 8px;
+}

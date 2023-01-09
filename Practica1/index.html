@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="text-align: center;margin: 0 auto;">
+    <!--
+
+        Salario por debajo de 15000 eur/anuales
+        Incremento de sueldo de 1.5%
+
+        Salario por encima de 15000 eur/anuales
+        Incremento de sueldo de 0.5%
+
+        Por cada hijo
+        Se abonará un 0.2 de su salario inicial
+
+        Por perspectiva de género, por ser mujer
+        Subida del 0.1% de su salario inicial
+
+        Valoreaciones
+
+    -->
+    <div class="container" style="text-align: center;margin: 0 auto;">
+        <div style="margin-top: 16px;"><a href="mailto:rrhh@estaempresa.com?Subject=Actualización%20salarial%20Real%20Decreto%20901/2020" >Contacta con
+            Dept. RR.HH.</a></div>
+        <div class="container justify-content-center" id="cuadroTexto">
+
+            <h2>APLICACION CONVENIO</h2>
+            <p>Real Decreto 901/2020, de 13 de octubre, por el que se regulan los planes de igualdad y su registro y se
+                modifica el Real Decreto 713/2010, de 28 de mayo, sobre registro y depósito de convenios y acuerdos
+                colectivos de trabajo.
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Consultar
+                Actualización Salarial</a>
+
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+                tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-2" id="exampleModalLabel">Rellena tus datos</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="limpiar">
+                                <div class="form-floating mb-2">
+                                    <input type="email" class="form-control" id="salario"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Sueldo anual</label>
+                                </div>
+                                <div class="form-helper text-black-50">ej. 12000</div>
+                                <br>
+                                <div class="form-floating mb-2">
+                                    <input type="email" class="form-control" id="sexo" placeholder="name@example.com">
+                                    <label for="floatingInput">Sexo</label>
+                                </div>
+                                <div class="form-helper text-black-50">Mujer/Hombre</div>
+                                <br>
+                                <div class="form-floating mb-2">
+                                    <input type="email" class="form-control" id="nHijos" placeholder="name@example.com">
+                                    <label for="floatingInput">Nº de hijos</label>
+                                </div>
+                                <div class="form-helper text-black-50">ej. 2</div>
+                                <br>
+                            </form>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+                                onclick="calcularSalario()">Actualización Salarial</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Actualización Salarial</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="resultado">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                aria-label="Close">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
